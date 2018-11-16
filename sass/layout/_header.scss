@@ -1,3 +1,45 @@
 .header {
-    height: 100vh;
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        var(--gradient-color-primary), 
+        var(--gradient-color-secondary)), 
+        url(../img/music-3600.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__heading {
+        background-color: yellow;
+        height: 7rem;
+        width: 40rem;
+    }
+
+    &__search {
+        background-color: blue;
+        height: 4rem;
+        width: 40rem;
+        display: flex;
+        justify-content: center;
+
+        &-input {
+            height: 4rem;
+            width: 35rem;
+        }
+
+        &-button {
+            height: 4rem;
+            width: 5rem;
+        }
+        
+    }
 }
+

@@ -1,3 +1,7 @@
+:root {
+  --gradient-color-primary: rgba(102, 204, 153, 0.5);
+  --gradient-color-secondary: rgba(191, 234, 212, 0.5); }
+
 *,
 ::after,
 ::before {
@@ -9,7 +13,33 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
   font-size: 62.5%;
-  color: #777; }
+  color: #777;
+  padding: 2rem; }
 
 .header {
-  height: 100vh; }
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, var(--gradient-color-primary), var(--gradient-color-secondary)), url(../img/music-3600.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header__text-box {
+    display: flex;
+    flex-direction: column; }
+  .header__heading {
+    background-color: yellow;
+    height: 7rem;
+    width: 40rem; }
+  .header__search {
+    background-color: blue;
+    height: 4rem;
+    width: 40rem;
+    display: flex;
+    justify-content: center; }
+    .header__search-input {
+      height: 4rem;
+      width: 35rem; }
+    .header__search-button {
+      height: 4rem;
+      width: 5rem; }
