@@ -1,0 +1,14 @@
+{
+  "name": "artists-finder",
+  "version": "1.0.0",
+  "description": "search engine that obtains a list of the best artists in a given country",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Adrian",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
