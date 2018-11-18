@@ -1,7 +1,17 @@
 :root {
-    // Header
+    // HEADER
     --gradient-color-primary: rgba(102, 204, 153, 0.5);
     --gradient-color-secondary: rgba(191, 234, 212, 0.5);
+
+    // FONT
+    --default-font-color: #777;
+    --heading-font-color: #f3f3f3;
+
+    // SEARCH
+    --color-grey-light-1: #e2e2e2;
+    --color-grey-light-2: #c9c9c9;
+
+
 }
 
 
@@ -17,6 +27,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
     font-size: 62.5%; // 10px
-    color: #777;
+    color: var(--default-font-color);
     padding: 2rem;
 }
+
+
