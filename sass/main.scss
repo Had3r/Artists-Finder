@@ -1,8 +1,5 @@
-@import "base/base";
-@import "base/typography";
+@import "base";
+@import "header";
+@import "search";
+@import "footer";
 
-@import "layout/header";
-@import "layout/grid";
-@import "layout/footer";
-
-@import "components/search";

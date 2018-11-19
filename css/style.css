@@ -1,10 +1,19 @@
+@charset "UTF-8";
 :root {
   --gradient-color-primary: rgba(102, 204, 153, 0.5);
   --gradient-color-secondary: rgba(191, 234, 212, 0.5);
   --default-font-color: #777;
   --heading-font-color: #f3f3f3;
   --color-grey-light-1: #e2e2e2;
-  --color-grey-light-2: #c9c9c9; }
+  --color-grey-light-2: #c9c9c9;
+  --color-grey-light-3: #f3f3f3;
+  --color-box-shadow: rgba(0, 0, 0, .15);
+  --color-btn-1: #6c9;
+  --color-btn-2: #fff;
+  --gradient-color-1-bg-2: #fad390;
+  --gradient-color-2-bg-2: #f6b93b;
+  --gradient-color-1-bg-3: #6a89cc;
+  --gradient-color-2-bg-3: #4a69bd; }
 
 *,
 ::after,
@@ -47,14 +56,14 @@ body {
       font-weight: bold;
       letter-spacing: 20px; }
   .header__search {
-    height: 4rem;
+    height: 3rem;
     width: 40rem;
     padding: 6rem 3rem;
     margin-left: -2rem;
     display: flex;
     justify-content: center; }
     .header__search-input {
-      height: 4rem;
+      height: 3rem;
       font-family: inherit;
       color: var(--default-font-color);
       background-color: var(--color-grey-light-1);
@@ -63,7 +72,7 @@ body {
       border: none;
       width: 80%;
       transition: all .2s;
-      font-size: 3rem;
+      font-size: 2rem;
       padding: .7rem 2rem; }
       .header__search-input:focus {
         outline: none;
@@ -71,8 +80,8 @@ body {
       .header__search-input::-webkit-input-placeholder {
         color: var(--color-grey-light-2); }
     .header__search-button {
-      height: 3rem;
-      width: 5rem;
+      height: 2rem;
+      width: 4rem;
       border: none;
       background-color: var(--color-grey-light-1); }
       .header__search-button:active {
@@ -80,6 +89,75 @@ body {
       .header__search-button:focus {
         outline: none; }
   .header__icon {
-    height: 4rem;
+    height: 3rem;
     width: 2rem;
     fill: var(--color-grey-light-2); }
+
+.container {
+  background-color: var(--color-grey-light-3);
+  padding: 25rem 0;
+  margin-top: -15rem;
+  display: flex;
+  justify-content: space-evenly; }
+  .container__box {
+    background-color: var(--color-boxes);
+    height: 30rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 1.5rem 4rem var(--color-box-shadow);
+    transition: transform .3s; }
+    .container__box:hover {
+      transform: translateY(-1.5rem) scale(1.03); }
+  .container__icon {
+    fill: var(--color-grey-light-3);
+    height: 10rem;
+    width: 10rem; }
+  .container__text-1 {
+    padding: 2.3rem; }
+    .container__text-1--style {
+      color: var(--color-grey-light-3);
+      font-size: 1.2rem;
+      text-transform: uppercase; }
+  .container__text-2 {
+    padding-top: 2rem; }
+    .container__text-2--style {
+      font-size: 1rem; }
+  .container__text-3 {
+    padding: 2rem; }
+    .container__text-3--style {
+      font-size: 1rem; }
+  .container__btn {
+    border: none;
+    font-size: .8rem;
+    background-color: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    color: var(--color-btn-1);
+    outline: none;
+    border-bottom: 1px solid var(--color-btn-1);
+    transition: all .2s; }
+    .container__btn:hover {
+      color: var(--color-btn-2);
+      background-color: var(--color-btn-1);
+      transform: translateY(-2px); }
+    .container__btn:active {
+      transform: translateY(-2px); }
+  .container__picture {
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-blend-mode: screen; }
+    .container__picture--1 {
+      background-image: linear-gradient(to right bottom, var(--gradient-color-primary), var(--gradient-color-secondary)), url(../img/bg-card1-1920×1357.jpg);
+      background-size: cover; }
+    .container__picture--2 {
+      background-image: linear-gradient(to right bottom, var(--gradient-color-1-bg-2), var(--gradient-color-2-bg-2)), url(../img/bg-card2-1920×1271.jpg);
+      background-size: cover; }
+    .container__picture--3 {
+      background-image: linear-gradient(to right bottom, var(--gradient-color-1-bg-3), var(--gradient-color-2-bg-3)), url(../img/bg-card3-1920×1280.jpg);
+      background-size: cover; }

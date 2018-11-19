@@ -39,7 +39,7 @@
     }
 
     &__search {
-        height: 4rem;
+        height: 3rem;
         width: 40rem;
         padding: 6rem 3rem;
         margin-left: -2rem;
@@ -49,7 +49,7 @@
         
 
         &-input {
-            height: 4rem;
+            height: 3rem;
             font-family: inherit;
             color: var(--default-font-color);
             background-color: var(--color-grey-light-1);
@@ -58,7 +58,7 @@
             border: none;
             width: 80%;
             transition: all .2s;
-            font-size: 3rem;
+            font-size: 2rem;
             padding: .7rem 2rem;
 
             &:focus {
@@ -74,8 +74,8 @@
         
 
         &-button {
-            height: 3rem;
-            width: 5rem;
+            height: 2rem;
+            width: 4rem;
             border: none;
             background-color: var(--color-grey-light-1);
 
@@ -90,7 +90,7 @@
     }
 
     &__icon {
-        height: 4rem;
+        height: 3rem;
         width: 2rem;
         fill: var(--color-grey-light-2);
     }

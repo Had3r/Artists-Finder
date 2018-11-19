@@ -1,0 +1,120 @@
+///////////////////////////
+/////////// DATA OF ARTISTS
+
+.container {
+    background-color: var(--color-grey-light-3);
+    padding: 25rem 0;
+    margin-top: -15rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+    &__box {
+        background-color: var(--color-boxes);
+        height: 30rem;
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 1.5rem 4rem var(--color-box-shadow);
+        transition: transform .3s;
+
+        &:hover {
+            transform: translateY(-1.5rem) scale(1.03);
+        }
+    }
+
+    &__icon {
+        fill: var(--color-grey-light-3);
+        height: 10rem;
+        width: 10rem;
+    }
+
+    &__text-1 {
+        padding: 2.3rem;
+        
+        &--style {
+            color: var(--color-grey-light-3);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__text-2 {
+        padding-top: 2rem;
+
+        &--style {
+            font-size: 1rem;
+        }
+    }
+
+    &__text-3 {
+        padding: 2rem;
+
+        &--style {
+            font-size: 1rem;
+        }
+    }
+
+    &__btn {
+        border: none;
+        font-size: .8rem;
+        background-color: transparent;
+        font-family: inherit;
+        cursor: pointer;
+        color: var(--color-btn-1);
+        outline: none;
+        border-bottom: 1px solid var(--color-btn-1);
+        transition: all .2s;
+
+        &:hover  {
+            color: var(--color-btn-2);
+            background-color: var(--color-btn-1);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(-2px);
+        }
+    }
+
+    &__picture {
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-blend-mode: screen;
+
+        &--1 {
+            background-image: linear-gradient(
+            to right bottom, 
+            var(--gradient-color-primary), 
+            var(--gradient-color-secondary)), 
+            url(../img/bg-card1-1920×1357.jpg);
+            background-size: cover;
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+            to right bottom, 
+            var(--gradient-color-1-bg-2), 
+            var(--gradient-color-2-bg-2)), 
+            url(../img/bg-card2-1920×1271.jpg);
+            background-size: cover;
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+            to right bottom, 
+            var(--gradient-color-1-bg-3), 
+            var(--gradient-color-2-bg-3)), 
+            url(../img/bg-card3-1920×1280.jpg);
+            background-size: cover;
+        }
+    }
+}
+
+///////////////////////////
+/////////// DATA OF ALBUMS
+
