@@ -2,14 +2,14 @@
 /////////// DATA OF ARTISTS
 
 .container {
-    background-color: var(--color-grey-light-3);
-    padding: 25rem 0;
+    background-color: var(--color-grey-light-4);
+    padding: 25rem 0 10rem 5rem;
     margin-top: -15rem;
     display: flex;
     justify-content: space-evenly;
     
     &__box {
-        background-color: var(--color-boxes);
+        background-color: var(--color-grey-light-3);
         height: 30rem;
         width: 20rem;
         display: flex;
@@ -117,4 +117,40 @@
 
 ///////////////////////////
 /////////// DATA OF ALBUMS
+
+.bg-video {
+    opacity: 0.1;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    overflow: hidden;
+    position: absolute;
+    
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}   
+
+
+.albums {
+    height: 40rem;
+    position: relative;
+    
+    &__title {
+
+        width: 100%;
+        position: absolute;
+        padding: 1rem;
+        background-color: rgba(255,255,255,0.6);
+        text-align: center;
+        
+        &--text {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+        }
+    }
+}
 

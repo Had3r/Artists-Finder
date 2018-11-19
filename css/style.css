@@ -7,6 +7,7 @@
   --color-grey-light-1: #e2e2e2;
   --color-grey-light-2: #c9c9c9;
   --color-grey-light-3: #f3f3f3;
+  --color-grey-light-4: #E6E5E6;
   --color-box-shadow: rgba(0, 0, 0, .15);
   --color-btn-1: #6c9;
   --color-btn-2: #fff;
@@ -94,13 +95,13 @@ body {
     fill: var(--color-grey-light-2); }
 
 .container {
-  background-color: var(--color-grey-light-3);
-  padding: 25rem 0;
+  background-color: var(--color-grey-light-4);
+  padding: 25rem 0 10rem 5rem;
   margin-top: -15rem;
   display: flex;
   justify-content: space-evenly; }
   .container__box {
-    background-color: var(--color-boxes);
+    background-color: var(--color-grey-light-3);
     height: 30rem;
     width: 20rem;
     display: flex;
@@ -161,3 +162,29 @@ body {
     .container__picture--3 {
       background-image: linear-gradient(to right bottom, var(--gradient-color-1-bg-3), var(--gradient-color-2-bg-3)), url(../img/bg-card3-1920×1280.jpg);
       background-size: cover; }
+
+.bg-video {
+  opacity: 0.1;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  overflow: hidden;
+  position: absolute; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.albums {
+  height: 40rem;
+  position: relative; }
+  .albums__title {
+    width: 100%;
+    position: absolute;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center; }
+    .albums__title--text {
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem; }
