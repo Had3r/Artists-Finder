@@ -133,7 +133,6 @@
     }
 }   
 
-
 .albums {
     height: 50rem;
     width: 100%;
@@ -161,9 +160,7 @@
 
 }
 
-
-.box {
-    
+.box { 
     width: 85%;
     padding: 2rem;
     font-size: 1.2rem;
@@ -174,18 +171,50 @@
 
     & > * {
         transform: skewX(12deg);
-        display: inline-block;
-        
-        
+        display: inline-block;  
     }
 
     &:first-child {
         margin-top: 11rem;
-    
+    }
+}
+
+///////////////////////////
+/////////// PAGINATION
+
+.albums {
+
+    &__pages {
+        text-align: center;
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: .5rem;
+        margin-left: auto;
+        margin-right: auto;
+        
+        & button:first-child {
+            margin-right: 2rem;
+        }
+    }
+  
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: currentColor;
+        transform: translateY(6px);
     }
 
-    &__text {
-        
+    &__btn--prev, &__btn--next {
+        outline: none;
+        border: none;
+        color: currentColor;
+        background-color: transparent;
+        transition: all .3s;
+
+        &:hover {
+            color: var(--color-btn-hover);
+        }
     }
 }
 
