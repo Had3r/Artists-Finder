@@ -135,11 +135,12 @@
 
 
 .albums {
-    height: 40rem;
+    height: 50rem;
+    width: 100%;
     position: relative;
+    display: block;
     
     &__title {
-
         width: 100%;
         position: absolute;
         padding: 1rem;
@@ -151,6 +152,40 @@
             text-transform: uppercase;
             letter-spacing: 1rem;
         }
+    }
+}
+
+.result {
+   position: absolute;
+   width: 100%;
+
+}
+
+
+.box {
+    
+    width: 85%;
+    padding: 2rem;
+    font-size: 1.2rem;
+    transform: skewX(-12deg);
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+    margin: 1rem auto;
+
+    & > * {
+        transform: skewX(12deg);
+        display: inline-block;
+        
+        
+    }
+
+    &:first-child {
+        margin-top: 11rem;
+    
+    }
+
+    &__text {
+        
     }
 }
 
