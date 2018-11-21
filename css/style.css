@@ -11,10 +11,13 @@
   --color-box-shadow: rgba(0, 0, 0, .15);
   --color-btn-1: #6c9;
   --color-btn-2: #fff;
+  --color-btn-hover: #b2b2b2;
   --gradient-color-1-bg-2: #fad390;
   --gradient-color-2-bg-2: #f6b93b;
   --gradient-color-1-bg-3: #6a89cc;
-  --gradient-color-2-bg-3: #4a69bd; }
+  --gradient-color-2-bg-3: #4a69bd;
+  --color-bg: #3b3b3b;
+  --color-icon: #FF0000; }
 
 *,
 ::after,
@@ -208,3 +211,70 @@ body {
     display: inline-block; }
   .box:first-child {
     margin-top: 11rem; }
+
+.albums__pages {
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: .5rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .albums__pages button:first-child {
+    margin-right: 2rem; }
+
+.albums__icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: currentColor;
+  transform: translateY(6px); }
+
+.albums__btn--prev, .albums__btn--next {
+  outline: none;
+  border: none;
+  color: currentColor;
+  background-color: transparent;
+  transition: all .3s;
+  cursor: pointer;
+  margin-bottom: 1rem; }
+  .albums__btn--prev:hover, .albums__btn--next:hover {
+    color: var(--color-btn-hover); }
+
+.footer {
+  background-color: var(--color-bg);
+  padding: .7rem 0; }
+  .footer__text {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
+  .footer__text--style {
+    color: var(--heading-font-color);
+    font-size: 1rem; }
+  .footer__icon {
+    height: .8rem;
+    width: .8rem;
+    fill: var(--color-icon);
+    margin-left: 2px;
+    margin-right: 2px; }
+  .footer__copyright {
+    text-align: center;
+    margin-bottom: 1rem; }
+  .footer__button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    display: block;
+    width: 100%; }
+    .footer__button:hover {
+      cursor: pointer; }
+    .footer__button a:not(:last-child) {
+      margin-right: 12px; }
+  .footer__icons {
+    height: 1rem;
+    width: 1rem;
+    fill: var(--heading-font-color);
+    margin: 0 auto; }
+    .footer__icons:hover {
+      fill: var(--default-font-color);
+      cursor: pointer; }

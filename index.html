@@ -9,7 +9,6 @@
     <title>Artist Finder</title>
 </head>
 <body>
-
     <header class="header">
         <div class="header__text-box">
             <h1 class="header__heading">
@@ -23,13 +22,10 @@
                         <use xlink:href='img/sprite.svg#icon-search'></use>
                     </svg>
                 </button>
-
             </form>
         </div>
     </header>
-
     <main class="search-result">
-
         <div class="container">
             <div class="container__box">
                 <div class="container__picture container__picture--1">
@@ -56,7 +52,6 @@
                     See albums <span>&rarr;</span>
                 </button>
             </div>
-
             <div class="container__box">
                 <div class="container__picture container__picture--2">
                     <svg class="container__icon">
@@ -108,9 +103,7 @@
                 </button>
             </div>
         </div>
-
         <div class="albums">
-           
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="../img/notes.mp4" type="video/mp4">
@@ -118,13 +111,10 @@
                     Your browser is not supported!
                 </video>
             </div>
-
             <h2 class="albums__title">
                 <div class="albums__title--text">Podsiadło albums</div>
             </h2>
-
             <div class="result">
-
                 <div class="box">
                     <div class="box__text--name">
                         'album name':  
@@ -136,7 +126,6 @@
                         type: 'album relase type' 
                     </div>
                 </div>
-
                 <div class="box">
                     <div class="box__text--name">
                         'album name':  
@@ -148,7 +137,6 @@
                         type: 'album relase type'
                     </div>
                 </div>
-
                 <div class="box">
                     <div class="bo__text--name">
                         'album name':  
@@ -183,10 +171,7 @@
                     </div>
                 </div>               
             </div>
-
-            
-            <div class="albums__pages">
-                    
+            <div class="albums__pages">    
                 <button class="albums__btn--prev">
                     <svg class="albums__icon">
                         <use href="img/sprite.svg#icon-circle-left"></use>
@@ -196,13 +181,24 @@
                 <button class="albums__btn--next">
                     <span>Page 3</span>
                     <svg class="albums__icon">
-                        <use href="img/sprite.svg#icon-circle-right"></use>
+                        <use xlink:href="img/sprite.svg#icon-circle-right"></use>
                     </svg>
-                </button>
-                    
+                </button>   
             </div>
-              
         </div>
     </main>
+    <footer class="footer">
+        <div class="footer__text footer__text--style">
+            Built with <svg class="footer__icon"><use href="img/sprite.svg#icon-heart"></use></svg> in the beautiful city of Wroclaw, Poland.
+        </div>
+        <div class="footer__copyright footer__text--style">
+            Copyright &copy; 2018 Adrian Zawadzki
+        </div>
+        <button class="footer__button">
+            <a href="https://github.com/Had3r"><svg class="footer__icons"><use href="img/sprite.svg#icon-github"></use></svg></a>
+            <a href ="mailto:adrian.zawadzki@outlook.com"><svg class="footer__icons"><use href="img/sprite.svg#icon-mail4"></use></svg></a>
+            <a href="https://www.linkedin.com/in/adrian-zawadzki-181b8112a/"><svg class="footer__icons"><use href="img/sprite.svg#icon-linkedin2"></use></svg></a>
+        </button>
+    </footer>
 </body>
 </html>
