@@ -27,21 +27,38 @@
     --color-icon: #FF0000;
 }
 
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 43.75em;   // 700px
 
 *,
 ::after,
 ::before {
     margin: 0;
     padding: 0;
+    
+}
+
+
+html {
+    font-size: 62.5%; // 10px
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
-    font-size: 62.5%; // 10px
+    
     color: var(--default-font-color);
     padding: 2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 0;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
 }
 
 
