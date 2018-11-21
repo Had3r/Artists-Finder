@@ -44,15 +44,39 @@
         align-items: center;
 
         &--main {
-            font-size: 5rem;
+            font-size: 4.8rem;
             font-weight: bold;
             letter-spacing: 8px;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 4.5rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 3.6rem;
+                letter-spacing: 5px;
+            }
+
+            @media only screen and (max-width: $bp-smaller) {
+                font-size: 2.5rem;
+            }
         }
 
         &--sub {
             font-size: 1.5rem;
             font-weight: bold;
-            letter-spacing: 20px;;
+            letter-spacing: 20px;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 1rem;
+                letter-spacing: 15px;
+            }
+
+            @media only screen and (max-width: $bp-smaller) {
+                font-size: .7rem;
+                letter-spacing: 9px;
+            }
+            
         }
     }
 
@@ -64,7 +88,17 @@
         display: flex;
         justify-content: center;
         
-        
+        @media only screen and (max-width: $bp-medium) {
+            width: 33rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 27rem;
+        }
+
+        @media only screen and (max-width: $bp-smaller) {
+            width: 22rem;
+        }
 
         &-input {
             height: 3rem;
@@ -78,6 +112,20 @@
             transition: all .2s;
             font-size: 2rem;
             padding: .7rem 2rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                height: 2.2rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                height: 1.7rem;
+                margin-right: -5.5rem;
+            }
+
+            @media only screen and (max-width: $bp-smaller) {
+                height: 1.2rem;
+                margin-right: -4.9rem;
+            }
 
             &:focus {
                 outline: none;
@@ -112,6 +160,24 @@
         width: 2rem;
         fill: var(--color-grey-light-2);
         transform: translateY(7px);
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 2.7rem;
+            width: 1.8rem;
+            transform: translateY(3px);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            height: 2rem;
+            width: 1.5rem;
+            transform: translateY(5px);
+        }
+
+        @media only screen and (max-width: $bp-smaller) {
+            height: 1.8rem;
+            width: 1.2rem;
+            transform: translateY(4px);
+        }
     }
 
 }

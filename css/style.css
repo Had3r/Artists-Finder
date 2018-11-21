@@ -28,6 +28,9 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 40em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -37,9 +40,6 @@ body {
   @media only screen and (max-width: 75em) {
     body {
       padding: 0; } }
-  @media only screen and (max-width: 43.75em) {
-    body {
-      font-size: 50%; } }
 
 .header {
   height: 97vh;
@@ -53,7 +53,7 @@ body {
   @media only screen and (max-width: 75em) {
     .header {
       background-image: linear-gradient(to right bottom, var(--gradient-color-primary), var(--gradient-color-secondary)), url(../img/music-1280.jpg); } }
-  @media only screen and (max-width: 43.75em) {
+  @media only screen and (max-width: 40em) {
     .header {
       background-image: linear-gradient(to right bottom, var(--gradient-color-primary), var(--gradient-color-secondary)), url(../img/music-640.jpg); } }
   .header__text-box {
@@ -69,13 +69,31 @@ body {
     flex-direction: column;
     align-items: center; }
     .header__heading--main {
-      font-size: 5rem;
+      font-size: 4.8rem;
       font-weight: bold;
       letter-spacing: 8px; }
+      @media only screen and (max-width: 40em) {
+        .header__heading--main {
+          font-size: 4.5rem; } }
+      @media only screen and (max-width: 34.38em) {
+        .header__heading--main {
+          font-size: 3.6rem;
+          letter-spacing: 5px; } }
+      @media only screen and (max-width: 28.13em) {
+        .header__heading--main {
+          font-size: 2.5rem; } }
     .header__heading--sub {
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 20px; }
+      @media only screen and (max-width: 40em) {
+        .header__heading--sub {
+          font-size: 1rem;
+          letter-spacing: 15px; } }
+      @media only screen and (max-width: 28.13em) {
+        .header__heading--sub {
+          font-size: .7rem;
+          letter-spacing: 9px; } }
   .header__search {
     height: 3rem;
     width: 40rem;
@@ -83,6 +101,15 @@ body {
     margin-left: -2rem;
     display: flex;
     justify-content: center; }
+    @media only screen and (max-width: 40em) {
+      .header__search {
+        width: 33rem; } }
+    @media only screen and (max-width: 34.38em) {
+      .header__search {
+        width: 27rem; } }
+    @media only screen and (max-width: 28.13em) {
+      .header__search {
+        width: 22rem; } }
     .header__search-input {
       height: 3rem;
       font-family: inherit;
@@ -95,6 +122,17 @@ body {
       transition: all .2s;
       font-size: 2rem;
       padding: .7rem 2rem; }
+      @media only screen and (max-width: 40em) {
+        .header__search-input {
+          height: 2.2rem; } }
+      @media only screen and (max-width: 34.38em) {
+        .header__search-input {
+          height: 1.7rem;
+          margin-right: -5.5rem; } }
+      @media only screen and (max-width: 28.13em) {
+        .header__search-input {
+          height: 1.2rem;
+          margin-right: -4.9rem; } }
       .header__search-input:focus {
         outline: none;
         width: 100%; }
@@ -114,6 +152,21 @@ body {
     width: 2rem;
     fill: var(--color-grey-light-2);
     transform: translateY(7px); }
+    @media only screen and (max-width: 40em) {
+      .header__icon {
+        height: 2.7rem;
+        width: 1.8rem;
+        transform: translateY(3px); } }
+    @media only screen and (max-width: 34.38em) {
+      .header__icon {
+        height: 2rem;
+        width: 1.5rem;
+        transform: translateY(5px); } }
+    @media only screen and (max-width: 28.13em) {
+      .header__icon {
+        height: 1.8rem;
+        width: 1.2rem;
+        transform: translateY(4px); } }
 
 .container {
   background-color: var(--color-grey-light-4);
@@ -206,6 +259,12 @@ body {
   width: 100%;
   position: relative;
   display: block; }
+  @media only screen and (max-width: 28.13em) {
+    .albums {
+      height: 70rem; } }
+  @media only screen and (max-width: 21.88em) {
+    .albums {
+      height: 75rem; } }
   .albums__title {
     width: 100%;
     position: absolute;
@@ -234,6 +293,9 @@ body {
     display: inline-block; }
   .box:first-child {
     margin-top: 11rem; }
+    @media only screen and (max-width: 21.88em) {
+      .box:first-child {
+        margin-top: 15rem; } }
 
 .albums__pages {
   text-align: center;

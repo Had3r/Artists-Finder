@@ -146,6 +146,14 @@
     width: 100%;
     position: relative;
     display: block;
+
+    @media only screen and (max-width: $bp-smaller) {
+        height: 70rem;;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        height: 75rem;
+    }
     
     &__title {
         width: 100%;
@@ -184,6 +192,10 @@
 
     &:first-child {
         margin-top: 11rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-top: 15rem;
+        }
     }
 }
 

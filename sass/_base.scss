@@ -27,9 +27,12 @@
     --color-icon: #FF0000;
 }
 
-$bp-largest: 75em;     // 1200px
-$bp-large: 68.75em;    // 1100px
-$bp-medium: 43.75em;   // 700px
+$bp-largest: 75em;       // 1200px
+$bp-large: 68.75em;      // 1100px
+$bp-medium: 40em;        // 640px
+$bp-small: 34.38em;      // 550px
+$bp-smaller: 28.13em;   // 450px
+$bp-smallest: 21.88em;    // 350px
 
 *,
 ::after,
@@ -43,6 +46,10 @@ $bp-medium: 43.75em;   // 700px
 html {
     font-size: 62.5%; // 10px
     box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -56,9 +63,7 @@ body {
         padding: 0;
     }
 
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 50%;
-    }
+    
 }
 
 
