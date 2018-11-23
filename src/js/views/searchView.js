@@ -12,7 +12,7 @@ export const clearResults = () => {
     elements.searchResArt.innerHTML = '';
 }
 
-export const renderFirstArtist = (top1, countryOne) => {
+export const renderFirstArtist = (top1, countryOne = 'no data in demo') => {
     
     const markup = `
     <div class="container__box">
@@ -47,8 +47,8 @@ export const renderFirstArtist = (top1, countryOne) => {
     elements.searchResArt.insertAdjacentHTML('afterbegin', markup);
 };
 
-export const renderSecondArtist = (top2, countryTwo) => {
-    
+export const renderSecondArtist = (top2, countryTwo = 'no data in demo') => { 
+
     const markup = `
     <div class="container__box">
     <div class="container__picture container__picture--2">
@@ -63,7 +63,7 @@ export const renderSecondArtist = (top2, countryTwo) => {
     </div>
     <div class="container__text-2">
         <div class="container__text-2--style">
-            from: ${countryTwo}
+            from: ${countryTwo}   
         </div>
     </div>
     <div class="container__text-3">
@@ -82,7 +82,7 @@ export const renderSecondArtist = (top2, countryTwo) => {
     elements.searchResArt.insertAdjacentHTML('beforeend', markup);
 };
 
-export const renderThirdArtist = (top3, countryThree) => {
+export const renderThirdArtist = (top3, countryThree = 'no data in demo') => {
     
     const markup = `
     <div class="container__box">
@@ -120,7 +120,7 @@ export const renderThirdArtist = (top3, countryThree) => {
 
 export const renderResults = artists => { 
     const [top1, top2, top3] = artists;
-
+    console.log(top3);
     const countryOne = getName(top1.artist.artist_country);  
     const countryTwo = getName(top2.artist.artist_country);
     const countryThree = getName(top3.artist.artist_country);
@@ -129,3 +129,4 @@ export const renderResults = artists => {
     renderSecondArtist(top2, countryTwo);
     renderThirdArtist(top3, countryThree);  
 };
+
