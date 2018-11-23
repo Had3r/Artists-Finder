@@ -1,4 +1,7 @@
 import Search from './models/Search';
+import * as searchView from './views/searchView';
+import { elements } from './views/base';
+const { getCode } = require('country-list');
 
 /** Global state of the app
  * - Search object (I have here search query and search result)
@@ -10,19 +13,22 @@ const state = {};
 
 const headerSearch = async () => {
     // 1. Get query from view
-    const query = 'pl';
-
+    const query = searchView.getInput();
+    console.log(query);
+    
     if (query) {
         // 2. New artist object and add to state
-        state.search = new Search(query);
+        state.search = new Search(getCode(query));
 
         // 3. Prepare UI for result
+        searchView.clearInput();
+        searchView.clearResults();
 
         // 4. Search for artist
         await state.search.getResults(); // this will return promise (all async function return promise)
 
         // 5. Render result on UI
-        console.log(state.search.result);
+        searchView.renderResults(state.search.result);
     }
 };
 
@@ -30,19 +36,8 @@ const headerSearch = async () => {
 
 
 
-document.querySelector('.header__search').addEventListener('submit', e => {
+elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     headerSearch();
 
 });
-
-
-
-
-
-
-
-
-// overwrite(countries)
-// const { getCode } = require('country-list');
-// console.log(getCode('Poland'))

@@ -1,9 +1,12 @@
 import axios from 'axios';
 
+
 export default class Search {
-    constructor(query) {
+    constructor(query) {                // to jest polska
         this.query = query;
     }
+
+    
 
     async getResults() {
         const proxy = 'https://cors-anywhere.herokuapp.com/';
