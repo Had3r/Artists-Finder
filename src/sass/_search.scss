@@ -123,6 +123,26 @@
     }
 }
 
+.loader {
+    text-align: center;
+    margin-top: -8rem;
+    & svg {
+        fill: var(--default-font-color);
+        height: 10rem;
+        width: 10rem;
+        animation: rotate 1.5s infinite linear;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+};
+
 ///////////////////////////
 /////////// DATA OF ALBUMS
 

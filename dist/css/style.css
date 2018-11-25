@@ -242,6 +242,21 @@ body {
       background-image: linear-gradient(to right bottom, var(--gradient-color-1-bg-3), var(--gradient-color-2-bg-3)), url(../img/bg-card3-640×426.jpg);
       background-size: cover; }
 
+.loader {
+  text-align: center;
+  margin-top: -8rem; }
+  .loader svg {
+    fill: var(--default-font-color);
+    height: 10rem;
+    width: 10rem;
+    animation: rotate 1.5s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
 .bg-video {
   opacity: 0.1;
   height: 100%;

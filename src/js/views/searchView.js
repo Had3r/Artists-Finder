@@ -120,7 +120,6 @@ export const renderThirdArtist = (top3, countryThree = 'no data in demo') => {
 
 export const renderResults = artists => { 
     const [top1, top2, top3] = artists;
-    console.log(top3);
     const countryOne = getName(top1.artist.artist_country);  
     const countryTwo = getName(top2.artist.artist_country);
     const countryThree = getName(top3.artist.artist_country);

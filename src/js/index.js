@@ -1,6 +1,6 @@
 import Search from './models/Search';
 import * as searchView from './views/searchView';
-import { elements } from './views/base';
+import { elements, renderLoader, clearLoader } from './views/base';
 const { getCode } = require('country-list');
 
 /** Global state of the app
@@ -23,11 +23,13 @@ const headerSearch = async () => {
         // 3. Prepare UI for result
         searchView.clearInput();
         searchView.clearResults();
+        renderLoader(elements.searchResArt);
 
         // 4. Search for artist
         await state.search.getResults(); // this will return promise (all async function return promise)
 
         // 5. Render result on UI
+        clearLoader();
         searchView.renderResults(state.search.result);
     }
 };
