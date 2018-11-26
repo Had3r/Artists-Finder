@@ -1,7 +1,8 @@
 export const elements = {
     searchForm: document.querySelector('.header__search'),
     searchInput: document.querySelector('.header__search-input'),
-    searchResArt: document.querySelector('.container')
+    searchResArt: document.querySelector('.container'),
+    albums: document.querySelector('.result')
 };
 
 export const elementStrings = {

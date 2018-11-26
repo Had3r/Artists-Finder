@@ -36,7 +36,7 @@ export const renderFirstArtist = (top1, countryOne = 'no data in demo') => {
             music genre: ${top1.artist.primary_genres.music_genre_list[0].music_genre.music_genre_name}
         </div>
     </div>
-    <a href="${top1.artist.artist_id}" class="container__link">
+    <a href="#${top1.artist.artist_id}" class="container__link">
     <button class="container__btn">
         See albums <span>&rarr;</span>
     </button>
@@ -71,7 +71,7 @@ export const renderSecondArtist = (top2, countryTwo = 'no data in demo') => {
             music genre: ${top2.artist.primary_genres.music_genre_list[0].music_genre.music_genre_name}
         </div>
     </div>
-    <a href="${top2.artist.artist_id}" class="container__link">
+    <a href="#${top2.artist.artist_id}" class="container__link">
     <button class="container__btn">
         See albums <span>&rarr;</span>
     </button>
@@ -106,7 +106,7 @@ export const renderThirdArtist = (top3, countryThree = 'no data in demo') => {
             music genre: ${top3.artist.primary_genres.music_genre_list[0].music_genre.music_genre_name}
         </div>
     </div>
-    <a href="${top3.artist.artist_id}" class="container__link">
+    <a href="#${top3.artist.artist_id}" class="container__link">
     <button class="container__btn">
         See albums <span>&rarr;</span>
     </button>
@@ -118,7 +118,7 @@ export const renderThirdArtist = (top3, countryThree = 'no data in demo') => {
 };
 
 
-export const renderResults = artists => { 
+export const renderResults = artists  => { 
     const [top1, top2, top3] = artists;
     const countryOne = getName(top1.artist.artist_country);  
     const countryTwo = getName(top2.artist.artist_country);

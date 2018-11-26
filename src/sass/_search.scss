@@ -181,6 +181,7 @@
         padding: 1rem;
         background-color: rgba(255,255,255,0.6);
         text-align: center;
+        margin-bottom: 5rem;
         
         &--text {
             font-size: 2.5rem;
@@ -191,9 +192,9 @@
 }
 
 .result {
-   position: absolute;
-   width: 100%;
-
+    position: absolute;
+    width: 100%;
+    margin-top: 9rem;
 }
 
 .box { 
@@ -207,16 +208,11 @@
 
     & > * {
         transform: skewX(12deg);
-        display: inline-block;  
+        display: inline-block;
     }
 
-    &:first-child {
-        margin-top: 11rem;
 
-        @media only screen and (max-width: $bp-smallest) {
-            margin-top: 15rem;
-        }
-    }
+    
 }
 
 ///////////////////////////
