@@ -24,3 +24,14 @@ export const clearLoader = () => {
     const loader = document.querySelector(`.${elementStrings.loader}`);
     if (loader) loader.parentElement.removeChild(loader);
 }
+
+export const renderResLoader = element => {
+    const loader = `
+    <div class="${elementStrings.loader}">
+        <svg>
+            <use href="img/sprite.svg#icon-loop2"></use>
+        </svg>
+    </div>
+    `;
+    element.insertAdjacentHTML('afterend', loader);
+}

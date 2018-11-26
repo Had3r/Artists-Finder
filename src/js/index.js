@@ -2,7 +2,7 @@ import Search from './models/Search';
 import Album from './models/Album';
 import * as searchView from './views/searchView';
 import * as albumView from './views/albumView';
-import { elements, renderLoader, clearLoader } from './views/base';
+import { elements, renderLoader, renderResLoader, clearLoader } from './views/base';
 const { getCode } = require('country-list');
 
 /** Global state of the app
@@ -59,6 +59,8 @@ const controlAlbum = async () => {
 
     if (id) {
         // Prepare UI for changes
+        const box = document.querySelector('.container');
+        renderResLoader(box);
 
         // Create new album object
         state.album = new Album(id);
@@ -71,9 +73,10 @@ const controlAlbum = async () => {
             await state.album.getAlbum();
 
             // Render album
-            albumView.renderBg();
+            clearLoader();
+            albumView.renderBg(state.album.title);
             albumView.renderAlbums(state.album.result);
-            
+
         } catch (err) {
             console.log(err);
         }

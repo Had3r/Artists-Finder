@@ -24,7 +24,7 @@ export const renderAlbums = array => {
     });
   };
 
-export const renderBg = () => {
+export const renderBg = title => {
     const markup = `
     <div class="albums">
         <div class="bg-video">
@@ -36,7 +36,7 @@ export const renderBg = () => {
         </div>
 
         <h2 class="albums__title">
-            <div class="albums__title--text">Podsiadło albums</div>
+            <div class="albums__title--text">${title} albums</div>
         </h2>
 
         <div class="result">
