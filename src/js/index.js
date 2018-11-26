@@ -71,7 +71,9 @@ const controlAlbum = async () => {
             await state.album.getAlbum();
 
             // Render album
+            albumView.renderBg();
             albumView.renderAlbums(state.album.result);
+            
         } catch (err) {
             console.log(err);
         }
