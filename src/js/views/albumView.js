@@ -1,5 +1,18 @@
 import { elements } from './base';
 
+export const clearAlbums = () => {
+    const result = document.querySelector('.albums');
+        if (result) {
+            result.parentElement.removeChild(result);
+        }
+}
+
+export const clearAlbumsList = () => {
+    const result = document.querySelector('.result');
+    if (result) {
+        result.innerHTML = '';
+    }
+}
 
 export const renderAlbum = album => {
     const markup = `
@@ -18,10 +31,47 @@ export const renderAlbum = album => {
     document.querySelector('.result').insertAdjacentHTML('afterbegin', markup);
 };
 
-export const renderAlbums = array => {
-    array.forEach(item => {
-      renderAlbum(item);
-    });
+// type: 'prev' or 'next'
+const createButton = (page, type) => `
+
+    <button class="btn-inline albums__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
+        <svg class="albums__icon">
+            <use href="img/sprite.svg#icon-circle-${type === 'prev' ? 'left' : 'right'}"></use>
+        </svg>
+        <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
+    </button>   
+`;
+
+const renderButtons = (page, numResult, resPerPage) => {
+    const pages = Math.ceil(numResult / resPerPage);
+
+    let button;
+    if (page === 1 && pages > 1) {
+        // Button to go to next page
+        button = createButton(page, 'next');
+    } else if (page < pages) {
+        // Both buttons 
+        button = `
+            ${createButton(page, 'prev')}
+            ${createButton(page, 'next')}
+        `;
+    } else if (page === pages && pages > 1) {
+        // Button to go to prev page
+        button = createButton(page, 'prev');
+    }
+
+    document.querySelector('.albums__pages').insertAdjacentHTML('afterbegin', button);
+};
+
+export const renderAlbums = (array, page = 1, resPerPage = 5) => {
+    // render results of current page
+    const start = (page - 1) * resPerPage;
+    const end = page * resPerPage;
+
+    array.slice(start, end).forEach(renderAlbum);
+
+    // render pagination buttons
+    renderButtons(page, array.length, resPerPage);
   };
 
 export const renderBg = title => {
@@ -42,18 +92,7 @@ export const renderBg = title => {
         <div class="result">
         </div>
         <div class="albums__pages">    
-            <button class="albums__btn--prev">
-                <svg class="albums__icon">
-                    <use href="img/sprite.svg#icon-circle-left"></use>
-                </svg>
-                <span>Page 1</span>
-            </button>
-            <button class="albums__btn--next">
-                <span>Page 3</span>
-                <svg class="albums__icon">
-                    <use xlink:href="img/sprite.svg#icon-circle-right"></use>
-                </svg>
-            </button>   
+              
         </div>  
      </div>
       `;

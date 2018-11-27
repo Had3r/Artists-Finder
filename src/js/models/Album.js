@@ -8,7 +8,7 @@ export default class Album {
 
     async getAlbum() {
         try {
-            const res = await axios(`${proxy}http://api.musixmatch.com/ws/1.1/artist.albums.get?artist_id=${this.id}&page_size=5&g_album_name=1&apikey=${key}`)
+            const res = await axios(`${proxy}http://api.musixmatch.com/ws/1.1/artist.albums.get?artist_id=${this.id}&g_album_name=1&s_release_date=desc&apikey=${key}`)
             console.log(res);
             this.result = res.data.message.body.album_list;
             this.title = res.data.message.body.album_list[0].album.artist_name;

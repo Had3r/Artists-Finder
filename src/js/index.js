@@ -49,6 +49,7 @@ elements.searchForm.addEventListener('submit', e => {
 });
 
 
+
 /******** ALBUM LIST CONTROLLER **********/
 
 
@@ -59,6 +60,9 @@ const controlAlbum = async () => {
 
     if (id) {
         // Prepare UI for changes
+        // clear result - czyli: 
+        albumView.clearAlbums();
+        
         const box = document.querySelector('.container');
         renderResLoader(box);
 
@@ -83,5 +87,14 @@ const controlAlbum = async () => {
         
     }
 }
+
+elements.searchResult.addEventListener('click', e => {
+    const btn = e.target.closest('.btn-inline');
+    if (btn) {
+        const goToPage = parseInt(btn.dataset.goto, 10);
+        albumView.clearAlbumsList();
+        albumView.renderAlbums(state.album.result, goToPage);
+    }
+});
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlAlbum));
