@@ -27,6 +27,7 @@ const headerSearch = async () => {
         // 3. Prepare UI for result
         searchView.clearInput();
         searchView.clearResults();
+        albumView.clearAlbums();
         renderLoader(elements.searchResArt);
 
         try {
@@ -47,7 +48,6 @@ elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     headerSearch();
 });
-
 
 
 /******** ALBUM LIST CONTROLLER **********/
