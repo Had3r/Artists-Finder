@@ -69,9 +69,6 @@ const controlAlbum = async () => {
         // Create new album object
         state.album = new Album(id);
 
-        // TESTING
-        //window.r = state.album;
-
         try {
             // Get album data
             await state.album.getAlbum();
@@ -93,6 +90,8 @@ elements.searchResult.addEventListener('click', e => {
     if (btn) {
         const goToPage = parseInt(btn.dataset.goto, 10);
         albumView.clearAlbumsList();
+        albumView.clearButton();
+        
         albumView.renderAlbums(state.album.result, goToPage);
     }
 });

@@ -14,6 +14,13 @@ export const clearAlbumsList = () => {
     }
 }
 
+export const clearButton = () => {
+    const btn = document.querySelector('.albums__pages');
+    if (btn) {
+        btn.innerHTML = '';
+    }
+}
+
 export const renderAlbum = album => {
     const markup = `
         <div class="box">
@@ -63,7 +70,7 @@ const renderButtons = (page, numResult, resPerPage) => {
     document.querySelector('.albums__pages').insertAdjacentHTML('afterbegin', button);
 };
 
-export const renderAlbums = (array, page = 1, resPerPage = 5) => {
+export const renderAlbums = (array, page = 1, resPerPage = 4) => {
     // render results of current page
     const start = (page - 1) * resPerPage;
     const end = page * resPerPage;
