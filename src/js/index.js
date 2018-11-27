@@ -24,6 +24,9 @@ const headerSearch = async () => {
         // 2. New artist object and add to state
         state.search = new Search(getCode(query));
 
+        // scroll down the page
+        elements.footer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
         // 3. Prepare UI for result
         searchView.clearInput();
         searchView.clearResults();
@@ -60,7 +63,6 @@ const controlAlbum = async () => {
 
     if (id) {
         // Prepare UI for changes
-        // clear result - czyli: 
         albumView.clearAlbums();
         
         const box = document.querySelector('.container');
@@ -81,7 +83,6 @@ const controlAlbum = async () => {
         } catch (err) {
             console.log(err);
         }
-        
     }
 }
 

@@ -3,6 +3,7 @@ export const elements = {
     searchInput: document.querySelector('.header__search-input'),
     searchResArt: document.querySelector('.container'),
     searchResult: document.querySelector('.search-result'),
+    footer: document.querySelector('.footer'),
     albums: document.querySelector('.result')
 };
 
