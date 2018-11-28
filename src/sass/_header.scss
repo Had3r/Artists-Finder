@@ -75,8 +75,7 @@
             @media only screen and (max-width: $bp-smaller) {
                 font-size: .7rem;
                 letter-spacing: 9px;
-            }
-            
+            } 
         }
     }
 
@@ -97,7 +96,8 @@
         }
 
         @media only screen and (max-width: $bp-smaller) {
-            width: 22rem;
+            width: 20rem;
+            padding: 0rem 3rem;
         }
 
         &-input {
@@ -123,8 +123,9 @@
             }
 
             @media only screen and (max-width: $bp-smaller) {
-                height: 1.2rem;
-                margin-right: -4.9rem;
+                height: .7rem;
+                margin-right: -5rem;
+                font-size: 1.2rem;
             }
 
             &:focus {
@@ -132,13 +133,11 @@
                 width: 100%;
             }
             
-
             &::-webkit-input-placeholder {
                 color: var(--color-grey-light-2);
             }
         }
         
-
         &-button {
             height: 2rem;
             width: 4rem;
@@ -176,9 +175,7 @@
         @media only screen and (max-width: $bp-smaller) {
             height: 1.8rem;
             width: 1.2rem;
-            transform: translateY(4px);
+            transform: translateY(1px);
         }
     }
-
 }
-

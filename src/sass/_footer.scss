@@ -1,0 +1,57 @@
+.footer {
+    background-color: var(--color-bg);
+    padding: .7rem 0;
+    
+    &__text {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text--style {
+        color: var(--heading-font-color);
+        font-size: 1.2rem;
+    }
+
+    &__icon {
+        height: 1rem;
+        width: 1rem;
+        fill: var(--color-icon);
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    &__copyright {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        text-align: center;
+        display: block;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & a:not(:last-child) {
+            margin-right: 12px;
+        }   
+    }
+    
+    &__icons {
+        height: 1.3rem;
+        width: 1.3rem;
+        fill: var(--heading-font-color);
+        margin: 0 auto;
+
+        &:hover {
+            fill: var(--default-font-color);
+            cursor: pointer;
+        }
+    }  
+}

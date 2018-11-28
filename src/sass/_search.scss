@@ -4,13 +4,22 @@
 .container {
     background-color: var(--color-grey-light-4);
     padding: 35rem 0 10rem 0;
-    margin-top: -20rem;
+    margin-top: -28rem;
     display: flex;
     justify-content: space-evenly;
 
     @media only screen and (max-width: $bp-large) {
         flex-direction: column;
         align-items: center;
+    }
+
+    @media only screen and (max-width: $bp-medium-large) {
+        margin-top: -37rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: -37rem;
+        padding: 40rem 0 10rem 0;
     }
     
     &__box {
@@ -131,6 +140,11 @@
         height: 10rem;
         width: 10rem;
         animation: rotate 1.5s infinite linear;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 7rem;
+            width: 7rem;
+        }
     }
 }
 
@@ -167,12 +181,16 @@
     position: relative;
     display: block;
 
-    @media only screen and (max-width: $bp-smaller) {
-        height: 70rem;;
+    @media only screen and (max-width: $bp-medium-large) {
+        height: 55rem;
     }
 
-    @media only screen and (max-width: $bp-smallest) {
-        height: 75rem;
+    @media only screen and (max-width: $bp-small) {
+        height: 60rem;
+    }
+
+    @media only screen and (max-width: $bp-smaller) {
+        height: 65rem;
     }
     
     &__title {
@@ -195,6 +213,10 @@
     position: absolute;
     width: 100%;
     margin-top: 9rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 14rem;
+    }
 }
 
 .box { 
@@ -209,10 +231,7 @@
     & > * {
         transform: skewX(12deg);
         display: inline-block;
-    }
-
-
-    
+    }  
 }
 
 ///////////////////////////
@@ -254,65 +273,4 @@
             color: var(--color-btn-hover);
         }
     }
-}
-
-////////////////////////////
-//////////////////// FOOTER
-
-.footer {
-    background-color: var(--color-bg);
-    padding: .7rem 0;
-    
-    &__text {
-        text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    &__text--style {
-        color: var(--heading-font-color);
-        font-size: 1.2rem;
-    }
-
-    &__icon {
-        height: 1rem;
-        width: 1rem;
-        fill: var(--color-icon);
-        margin-left: 2px;
-        margin-right: 2px;
-    }
-
-    &__copyright {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    &__button {
-        background-color: transparent;
-        border: none;
-        outline: none;
-        text-align: center;
-        display: block;
-        width: 100%;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        & a:not(:last-child) {
-            margin-right: 12px;
-        }   
-    }
-    
-    &__icons {
-        height: 1.3rem;
-        width: 1.3rem;
-        fill: var(--heading-font-color);
-        margin: 0 auto;
-
-        &:hover {
-            fill: var(--default-font-color);
-            cursor: pointer;
-        }
-    }  
 }

@@ -20,12 +20,12 @@ export const renderLoader = parent => {
     </div>
     `;
     parent.insertAdjacentHTML('afterbegin', loader);
-}
+};
 
 export const clearLoader = () => {
     const loader = document.querySelector(`.${elementString.loader}`);
     if (loader) loader.parentElement.removeChild(loader);
-}
+};
 
 export const renderResLoader = element => {
     const loader = `
@@ -36,4 +36,4 @@ export const renderResLoader = element => {
     </div>
     `;
     element.insertAdjacentHTML('afterend', loader);
-}
+};

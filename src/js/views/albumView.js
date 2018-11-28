@@ -8,24 +8,24 @@ const elementStrings = {
 
 export const clearAlbums = () => {
     const result = document.querySelector(`.${elementStrings.album}`);
-        if (result) {
-            result.parentElement.removeChild(result);
-        }
-}
+    if (result) {
+        result.parentElement.removeChild(result);
+    }
+};
 
 export const clearAlbumsList = () => {
     const result = document.querySelector(`.${elementStrings.result}`);
     if (result) {
         result.innerHTML = '';
     }
-}
+};
 
 export const clearButton = () => {
     const btn = document.querySelector(`.${elementStrings.albumsPages}`);
     if (btn) {
         btn.innerHTML = '';
     }
-}
+};
 
 export const renderAlbum = album => {
     const markup = `
@@ -46,7 +46,6 @@ export const renderAlbum = album => {
 
 // type: 'prev' or 'next'
 const createButton = (page, type) => `
-
     <button class="btn-inline albums__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
         <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
         <svg class="albums__icon">
@@ -56,9 +55,10 @@ const createButton = (page, type) => `
 `;
 
 const renderButtons = (page, numResult, resPerPage) => {
-    const pages = Math.ceil(numResult / resPerPage);
 
+    const pages = Math.ceil(numResult / resPerPage);
     let button;
+
     if (page === 1 && pages > 1) {
         // Button to go to next page
         button = createButton(page, 'next');
@@ -97,17 +97,14 @@ export const renderBg = title => {
                 Your browser is not supported!
             </video>
         </div>
-
         <h2 class="albums__title">
             <div class="albums__title--text">${title} albums</div>
         </h2>
-
         <div class="result">
         </div>
-        <div class="albums__pages">    
-              
+        <div class="albums__pages">      
         </div>  
      </div>
       `;
       elements.searchResArt.insertAdjacentHTML('afterend', markup);
-  }
+  };

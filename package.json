@@ -6,8 +6,8 @@
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
     "watch:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 version\" dist/css/style.css -o dist/css/style.prefix.css",
-    "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 version\" src/css/style.css -o src/css/style.prefix.css",
+    "compress:css": "node-sass src/css/style.prefix.css dist/css/style.css --output-style compressed",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open"
@@ -17,9 +17,11 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
+    "autoprefixer": "^9.3.1",
     "babel-loader": "^8.0.4",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.10.0",
+    "postcss-cli": "^6.0.1",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
