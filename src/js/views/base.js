@@ -7,13 +7,13 @@ export const elements = {
     albums: document.querySelector('.result')
 };
 
-export const elementStrings = {
+const elementString = {
     loader: 'loader'
 };
 
 export const renderLoader = parent => {
     const loader = `
-    <div class="${elementStrings.loader}">
+    <div class="${elementString.loader}">
         <svg>
             <use href="img/sprite.svg#icon-loop2"></use>
         </svg>
@@ -23,13 +23,13 @@ export const renderLoader = parent => {
 }
 
 export const clearLoader = () => {
-    const loader = document.querySelector(`.${elementStrings.loader}`);
+    const loader = document.querySelector(`.${elementString.loader}`);
     if (loader) loader.parentElement.removeChild(loader);
 }
 
 export const renderResLoader = element => {
     const loader = `
-    <div class="${elementStrings.loader}">
+    <div class="${elementString.loader}">
         <svg>
             <use href="img/sprite.svg#icon-loop2"></use>
         </svg>

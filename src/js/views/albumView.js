@@ -1,21 +1,27 @@
 import { elements } from './base';
 
+const elementStrings = {
+    album: 'albums',
+    result: 'result',
+    albumsPages: 'albums__pages'
+};
+
 export const clearAlbums = () => {
-    const result = document.querySelector('.albums');
+    const result = document.querySelector(`.${elementStrings.album}`);
         if (result) {
             result.parentElement.removeChild(result);
         }
 }
 
 export const clearAlbumsList = () => {
-    const result = document.querySelector('.result');
+    const result = document.querySelector(`.${elementStrings.result}`);
     if (result) {
         result.innerHTML = '';
     }
 }
 
 export const clearButton = () => {
-    const btn = document.querySelector('.albums__pages');
+    const btn = document.querySelector(`.${elementStrings.albumsPages}`);
     if (btn) {
         btn.innerHTML = '';
     }
@@ -35,17 +41,17 @@ export const renderAlbum = album => {
             </div>
         </div>
     `;
-    document.querySelector('.result').insertAdjacentHTML('afterbegin', markup);
+    document.querySelector(`.${elementStrings.result}`).insertAdjacentHTML('afterbegin', markup);
 };
 
 // type: 'prev' or 'next'
 const createButton = (page, type) => `
 
     <button class="btn-inline albums__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
+        <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
         <svg class="albums__icon">
             <use href="img/sprite.svg#icon-circle-${type === 'prev' ? 'left' : 'right'}"></use>
         </svg>
-        <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
     </button>   
 `;
 
@@ -67,7 +73,7 @@ const renderButtons = (page, numResult, resPerPage) => {
         button = createButton(page, 'prev');
     }
 
-    document.querySelector('.albums__pages').insertAdjacentHTML('afterbegin', button);
+    document.querySelector(`.${elementStrings.albumsPages}`).insertAdjacentHTML('afterbegin', button);
 };
 
 export const renderAlbums = (array, page = 1, resPerPage = 4) => {
