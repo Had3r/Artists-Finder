@@ -1,9 +1,12 @@
 ///////////////////////////
 /////////// DATA OF ARTISTS
 
+
+
 .container {
     background-color: var(--color-grey-light-4);
-    padding: 35rem 0 10rem 0;
+    padding: 43rem 0 27rem 0;
+    margin-bottom: -10rem;
     margin-top: -28rem;
     display: flex;
     justify-content: space-evenly;
@@ -132,9 +135,27 @@
     }
 }
 
-.loader {
+.loader-1 {
     text-align: center;
-    margin-top: -8rem;
+    margin-top: 2rem;
+    & svg {
+        fill: var(--default-font-color);
+        height: 10rem;
+        width: 10rem;
+        animation: rotate 1.5s infinite linear;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 7rem;
+            width: 7rem;
+        }
+    }
+}
+
+.loader-2 {
+    
+    position: absolute;
+    margin-top: 45rem;
+
     & svg {
         fill: var(--default-font-color);
         height: 10rem;
@@ -176,10 +197,11 @@
 }   
 
 .albums {
-    height: 50rem;
+    height: 70rem;
     width: 100%;
     position: relative;
     display: block;
+    margin-bottom: -20rem;
 
     @media only screen and (max-width: $bp-medium-large) {
         height: 55rem;
@@ -214,6 +236,10 @@
     width: 100%;
     margin-top: 9rem;
 
+    & > div {
+        margin: 2.7rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
         margin-top: 14rem;
     }
@@ -245,8 +271,7 @@
         width: 100%;
         position: absolute;
         bottom: .5rem;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 14rem;
         
         & button:first-child {
             margin-right: 2.5rem;
@@ -268,9 +293,18 @@
         transition: all .3s;
         cursor: pointer;
         margin-bottom: 1rem;
+        display: inline-block;
 
         &:hover {
             color: var(--color-btn-hover);
         }
+    }
+
+    &__btn--next {
+       width: 10rem;
+
+       & svg:first-child {
+           margin-right: -6.5rem;
+       }
     }
 }

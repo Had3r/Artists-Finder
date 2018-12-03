@@ -2,11 +2,16 @@ import { elements } from './base';
 
 const elementStrings = {
     album: 'albums',
+    loader: 'loader-2',
     result: 'result',
-    albumsPages: 'albums__pages'
+    albumsPages: 'albums__pages',
+    container: 'container'
 };
 
 export const clearAlbums = () => {
+    
+    
+
     const result = document.querySelector(`.${elementStrings.album}`);
     if (result) {
         result.parentElement.removeChild(result);
@@ -47,10 +52,10 @@ export const renderAlbum = album => {
 // type: 'prev' or 'next'
 const createButton = (page, type) => `
     <button class="btn-inline albums__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
-        <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
         <svg class="albums__icon">
             <use href="img/sprite.svg#icon-circle-${type === 'prev' ? 'left' : 'right'}"></use>
         </svg>
+        <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
     </button>   
 `;
 
@@ -108,3 +113,21 @@ export const renderBg = title => {
       `;
       elements.searchResArt.insertAdjacentHTML('afterend', markup);
   };
+
+  
+export const renderLoader = () => {
+    const loader = `
+    <div class="${elementStrings.loader}">
+        <svg>
+            <use href="img/sprite.svg#icon-loop2"></use>
+        </svg>
+    </div>
+    `;
+    elements.searchResArt.insertAdjacentHTML('beforeend', loader);
+};
+
+export const clearLoader = () => {
+    const loader = document.querySelector(`.${elementStrings.loader}`);
+    if (loader) loader.parentElement.removeChild(loader);
+};
+

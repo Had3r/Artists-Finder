@@ -42,7 +42,7 @@ body {
       padding: 0; } }
 
 .header {
-  height: 97vh;
+  height: 100vh;
   background-image: linear-gradient(to right bottom, var(--gradient-color-primary), var(--gradient-color-secondary)), url(../img/music-1920.jpg);
   background-size: cover;
   background-position: bottom;
@@ -109,7 +109,8 @@ body {
         width: 27rem; } }
     @media only screen and (max-width: 28.13em) {
       .header__search {
-        width: 22rem; } }
+        width: 20rem;
+        padding: 0rem 3rem; } }
     .header__search-input {
       height: 3rem;
       font-family: inherit;
@@ -131,8 +132,9 @@ body {
           margin-right: -5.5rem; } }
       @media only screen and (max-width: 28.13em) {
         .header__search-input {
-          height: 1.2rem;
-          margin-right: -4.9rem; } }
+          height: .7rem;
+          margin-right: -5rem;
+          font-size: 1.2rem; } }
       .header__search-input:focus {
         outline: none;
         width: 100%; }
@@ -166,18 +168,25 @@ body {
       .header__icon {
         height: 1.8rem;
         width: 1.2rem;
-        transform: translateY(4px); } }
+        transform: translateY(1px); } }
 
 .container {
   background-color: var(--color-grey-light-4);
   padding: 35rem 0 10rem 0;
-  margin-top: -20rem;
+  margin-top: -28rem;
   display: flex;
   justify-content: space-evenly; }
   @media only screen and (max-width: 68.75em) {
     .container {
       flex-direction: column;
       align-items: center; } }
+  @media only screen and (max-width: 46.87rem) {
+    .container {
+      margin-top: -37rem; } }
+  @media only screen and (max-width: 40em) {
+    .container {
+      margin-top: -37rem;
+      padding: 40rem 0 10rem 0; } }
   .container__box {
     background-color: var(--color-grey-light-3);
     height: 40rem;
@@ -244,9 +253,22 @@ body {
 
 .loader {
   text-align: center;
-  margin: 5rem; }
+  margin-top: -8rem; }
   .loader svg {
-    fill: red; }
+    fill: var(--default-font-color);
+    height: 10rem;
+    width: 10rem;
+    animation: rotate 1.5s infinite linear; }
+    @media only screen and (max-width: 40em) {
+      .loader svg {
+        height: 7rem;
+        width: 7rem; } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
 
 .bg-video {
   opacity: 0.1;
@@ -261,22 +283,26 @@ body {
     object-fit: cover; }
 
 .albums {
-  height: 55rem;
+  height: 50rem;
   width: 100%;
   position: relative;
   display: block; }
+  @media only screen and (max-width: 46.87rem) {
+    .albums {
+      height: 55rem; } }
+  @media only screen and (max-width: 34.38em) {
+    .albums {
+      height: 60rem; } }
   @media only screen and (max-width: 28.13em) {
     .albums {
-      height: 70rem; } }
-  @media only screen and (max-width: 21.88em) {
-    .albums {
-      height: 75rem; } }
+      height: 65rem; } }
   .albums__title {
     width: 100%;
     position: absolute;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.6);
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 5rem; }
     .albums__title--text {
       font-size: 2.5rem;
       text-transform: uppercase;
@@ -284,7 +310,11 @@ body {
 
 .result {
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  margin-top: 9rem; }
+  @media only screen and (max-width: 34.38em) {
+    .result {
+      margin-top: 14rem; } }
 
 .box {
   width: 85%;
@@ -297,11 +327,6 @@ body {
   .box > * {
     transform: skewX(12deg);
     display: inline-block; }
-  .box:first-child {
-    margin-top: 11rem; }
-    @media only screen and (max-width: 21.88em) {
-      .box:first-child {
-        margin-top: 15rem; } }
 
 .albums__pages {
   text-align: center;
@@ -332,8 +357,9 @@ body {
     color: var(--color-btn-hover); }
 
 .footer {
+  clip-path: polygon(0);
   background-color: var(--color-bg);
-  padding: .7rem 0; }
+  padding: 1rem 0; }
   .footer__text {
     text-align: center;
     margin-top: 2rem;

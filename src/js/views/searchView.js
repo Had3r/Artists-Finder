@@ -2,7 +2,7 @@ import { elements } from './base';
 const { getName } = require('country-list');
 
 
-export const getInput = () => elements.searchInput.value;
+export const getQuery = () => elements.searchInput.value;
 
 export const clearInput = () => {
     elements.searchInput.value = '';
@@ -116,6 +116,8 @@ export const renderThirdArtist = (top3, countryThree = 'no data in demo') => {
 
 
 export const renderResults = artists  => { 
+    clearLoader();
+
     const [top1, top2, top3] = artists;
     const countryOne = getName(top1.artist.artist_country);  
     const countryTwo = getName(top2.artist.artist_country);
@@ -125,3 +127,25 @@ export const renderResults = artists  => {
     renderSecondArtist(top2, countryTwo);
     renderThirdArtist(top3, countryThree);  
 };
+
+const strings = {
+    loader: 'loader-1',
+    header: '.header'
+};
+
+export const renderLoader = () => {
+    const loader = `
+    <div class="${strings.loader}">
+        <svg>
+            <use href="img/sprite.svg#icon-loop2"></use>
+        </svg>
+    </div>
+    `;
+    elements.header.insertAdjacentHTML('afterend', loader);
+};
+
+export const clearLoader = () => {
+    const loader = document.querySelector(`.${strings.loader}`);
+    if (loader) loader.parentElement.removeChild(loader);
+};
+

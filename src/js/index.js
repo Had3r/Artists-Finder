@@ -17,7 +17,7 @@ const state = {};
 
 const headerSearch = async () => {
     // 1. Get query from view
-    const query = searchView.getInput();
+    const query = searchView.getQuery();
     
     if (query) {
         // 2. New artist object and add to state
@@ -30,18 +30,17 @@ const headerSearch = async () => {
         searchView.clearInput();
         searchView.clearResults();
         albumView.clearAlbums();
-        renderLoader(elements.searchResArt);
+        searchView.renderLoader();
 
         try {
             // 5. Search for artist
             await state.search.getResults(); 
 
             // 6. Render result on UI
-            clearLoader();
             searchView.renderResults(state.search.result);
         } catch (err) {
             console.log('error');
-            clearLoader();
+            searchView.clearLoader();
         }
     }
 };
@@ -60,8 +59,7 @@ const controlAlbum = async () => {
     if (id) {
         // 2. Prepare UI for changes
         albumView.clearAlbums();
-        const box = document.querySelector('.container');
-        renderResLoader(box);
+        albumView.renderLoader();
 
         // 3. Create new album object
         state.album = new Album(id);
@@ -71,7 +69,7 @@ const controlAlbum = async () => {
             await state.album.getAlbum();
 
             // 5. Render album
-            clearLoader();
+            albumView.clearLoader();
             albumView.renderBg(state.album.title);
             albumView.renderAlbums(state.album.result);
 

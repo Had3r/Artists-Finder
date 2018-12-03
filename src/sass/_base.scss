@@ -25,6 +25,7 @@
     // FOOTER
     --color-bg: #3b3b3b;
     --color-icon: #FF0000;
+    --color-line: rgba(255,255,255,.2);
 }
 
 $bp-largest: 75em;           // 1200px
@@ -53,7 +54,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
-    
+    //background-color: var(--color-grey-light-4);
     color: var(--default-font-color);
     padding: 2rem;
 
