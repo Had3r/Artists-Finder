@@ -112,8 +112,7 @@ body {
         width: 27rem; } }
     @media only screen and (max-width: 28.13em) {
       .header__search {
-        width: 20rem;
-        padding: 1rem 3rem; } }
+        width: 20rem; } }
     .header__search-input {
       height: 3rem;
       font-family: inherit;
@@ -133,11 +132,6 @@ body {
         .header__search-input {
           height: 1.7rem;
           margin-right: -5.5rem; } }
-      @media only screen and (max-width: 28.13em) {
-        .header__search-input {
-          height: .7rem;
-          margin-right: -5rem;
-          font-size: 1.2rem; } }
       .header__search-input:focus {
         outline: none;
         width: 100%; }
@@ -167,17 +161,12 @@ body {
         height: 2rem;
         width: 1.5rem;
         transform: translateY(5px); } }
-    @media only screen and (max-width: 28.13em) {
-      .header__icon {
-        height: 1.8rem;
-        width: 1.2rem;
-        transform: translateY(1px); } }
 
 .container {
   background-color: var(--color-grey-light-4);
   padding: 43rem 0 27rem 0;
   margin-bottom: -10rem;
-  margin-top: -28rem;
+  margin-top: -30rem;
   display: flex;
   justify-content: space-evenly; }
   @media only screen and (max-width: 68.75em) {
@@ -268,18 +257,6 @@ body {
         height: 7rem;
         width: 7rem; } }
 
-.loader-2 {
-  margin-left: 45%; }
-  .loader-2 svg {
-    fill: var(--default-font-color);
-    height: 10rem;
-    width: 10rem;
-    animation: rotate 1.5s infinite linear; }
-    @media only screen and (max-width: 40em) {
-      .loader-2 svg {
-        height: 7rem;
-        width: 7rem; } }
-
 @keyframes rotate {
   0% {
     transform: rotate(0); }
@@ -306,13 +283,13 @@ body {
   margin-bottom: -20rem; }
   @media only screen and (max-width: 46.87rem) {
     .albums {
-      height: 55rem; } }
+      height: 75rem; } }
   @media only screen and (max-width: 34.38em) {
     .albums {
-      height: 60rem; } }
+      height: 80rem; } }
   @media only screen and (max-width: 28.13em) {
     .albums {
-      height: 65rem; } }
+      height: 88rem; } }
   .albums__title {
     width: 100%;
     position: absolute;
@@ -346,6 +323,12 @@ body {
   .box > * {
     transform: skewX(12deg);
     display: inline-block; }
+    @media only screen and (max-width: 28.13em) {
+      .box > * {
+        transform: none; } }
+  @media only screen and (max-width: 28.13em) {
+    .box {
+      transform: none; } }
 
 .albums__pages {
   text-align: center;
@@ -362,6 +345,9 @@ body {
   width: 1.5rem;
   fill: currentColor;
   transform: translateY(3px); }
+  @media only screen and (max-width: 40em) {
+    .albums__icon {
+      transform: translateY(1px); } }
 
 .albums__btn--prev, .albums__btn--next {
   outline: none;
@@ -379,6 +365,9 @@ body {
   width: 10rem; }
   .albums__btn--next svg:first-child {
     margin-right: -6.5rem; }
+    @media only screen and (max-width: 40em) {
+      .albums__btn--next svg:first-child {
+        margin-right: -7.5rem; } }
 
 .footer {
   background: var(--color-bg);

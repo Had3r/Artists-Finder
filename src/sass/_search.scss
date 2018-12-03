@@ -7,7 +7,7 @@
     background-color: var(--color-grey-light-4);
     padding: 43rem 0 27rem 0;
     margin-bottom: -10rem;
-    margin-top: -28rem;
+    margin-top: -30rem;
     display: flex;
     justify-content: space-evenly;
 
@@ -151,26 +151,6 @@
     }
 }
 
-.loader-2 {
-    
-    margin-left: 45%;
-    
-
-    & svg {
-        fill: var(--default-font-color);
-        height: 10rem;
-        width: 10rem;
-        animation: rotate 1.5s infinite linear;
-
-        @media only screen and (max-width: $bp-medium) {
-            height: 7rem;
-            width: 7rem;
-        }
-    }
-
-    
-}
-
 @keyframes rotate {
     0% {
         transform: rotate(0);
@@ -206,15 +186,15 @@
     margin-bottom: -20rem;
 
     @media only screen and (max-width: $bp-medium-large) {
-        height: 55rem;
+        height: 75rem;
     }
 
     @media only screen and (max-width: $bp-small) {
-        height: 60rem;
+        height: 80rem;
     }
 
     @media only screen and (max-width: $bp-smaller) {
-        height: 65rem;
+        height: 88rem;
     }
     
     &__title {
@@ -259,7 +239,15 @@
     & > * {
         transform: skewX(12deg);
         display: inline-block;
+
+        @media only screen and (max-width: $bp-smaller) {
+            transform: none;
+        }
     }  
+
+    @media only screen and (max-width: $bp-smaller) {
+        transform: none;
+    }
 }
 
 ///////////////////////////
@@ -285,6 +273,10 @@
         width: 1.5rem;
         fill: currentColor;
         transform: translateY(3px);
+
+        @media only screen and (max-width: $bp-medium) {
+            transform: translateY(1px);
+        }
     }
 
     &__btn--prev, &__btn--next {
@@ -307,6 +299,10 @@
 
        & svg:first-child {
            margin-right: -6.5rem;
+
+           @media only screen and (max-width: $bp-medium) {
+               margin-right: -7.5rem;
+           }
        }
     }
 }
