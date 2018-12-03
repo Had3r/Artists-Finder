@@ -51,6 +51,9 @@ body {
   justify-content: center;
   align-items: center;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media only screen and (max-width: 46.87rem) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   @media only screen and (max-width: 75em) {
     .header {
       background-image: linear-gradient(to right bottom, var(--gradient-color-primary), var(--gradient-color-secondary)), url(../img/music-1280.jpg); } }
@@ -82,7 +85,7 @@ body {
           letter-spacing: 5px; } }
       @media only screen and (max-width: 28.13em) {
         .header__heading--main {
-          font-size: 2.5rem; } }
+          font-size: 3rem; } }
     .header__heading--sub {
       font-size: 1.5rem;
       font-weight: bold;
@@ -93,7 +96,6 @@ body {
           letter-spacing: 15px; } }
       @media only screen and (max-width: 28.13em) {
         .header__heading--sub {
-          font-size: .7rem;
           letter-spacing: 9px; } }
   .header__search {
     height: 3rem;
@@ -111,7 +113,7 @@ body {
     @media only screen and (max-width: 28.13em) {
       .header__search {
         width: 20rem;
-        padding: 0rem 3rem; } }
+        padding: 1rem 3rem; } }
     .header__search-input {
       height: 3rem;
       font-family: inherit;
@@ -188,7 +190,7 @@ body {
   @media only screen and (max-width: 40em) {
     .container {
       margin-top: -37rem;
-      padding: 40rem 0 10rem 0; } }
+      padding: 40rem 0 30rem 0; } }
   .container__box {
     background-color: var(--color-grey-light-3);
     height: 40rem;
@@ -267,8 +269,7 @@ body {
         width: 7rem; } }
 
 .loader-2 {
-  position: absolute;
-  margin-top: 45rem; }
+  margin-left: 45%; }
   .loader-2 svg {
     fill: var(--default-font-color);
     height: 10rem;
@@ -385,6 +386,9 @@ body {
   height: 35rem;
   clip-path: polygon(0 50%, 100% 14%, 100% 100%, 0 100%);
   position: relative; }
+  @media only screen and (max-width: 46.87rem) {
+    .footer {
+      clip-path: polygon(0 36%, 100% 14%, 100% 100%, 0 100%); } }
   .footer__text {
     text-align: center;
     padding-top: 20rem;

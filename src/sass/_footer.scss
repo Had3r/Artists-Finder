@@ -5,6 +5,10 @@
     height: 35rem;
     clip-path: polygon(0 50%, 100% 14%, 100% 100%, 0 100%);
     position: relative;
+
+    @media only screen and (max-width: $bp-medium-large) {
+        clip-path: polygon(0 36%, 100% 14%, 100% 100%, 0 100%);
+    }
     
     &__text {
         text-align: center;

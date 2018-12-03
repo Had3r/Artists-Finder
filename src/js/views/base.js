@@ -5,6 +5,7 @@ export const elements = {
     searchResult: document.querySelector('.search-result'),
     header: document.querySelector('.header'),
     footer: document.querySelector('.footer'),
-    albums: document.querySelector('.result')
+    albums: document.querySelector('.result'),
+    body: document.querySelector('body')
 };
 

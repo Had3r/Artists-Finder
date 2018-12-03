@@ -16,6 +16,7 @@ export const clearAlbums = () => {
     if (result) {
         result.parentElement.removeChild(result);
     }
+     
 };
 
 export const clearAlbumsList = () => {
@@ -31,6 +32,10 @@ export const clearButton = () => {
         btn.innerHTML = '';
     }
 };
+
+export const setCursor = () => elements.body.style.cursor = 'wait';
+
+export const clearCursor = () => elements.body.style.cursor = 'default';
 
 export const renderAlbum = album => {
     const markup = `
@@ -113,21 +118,3 @@ export const renderBg = title => {
       `;
       elements.searchResArt.insertAdjacentHTML('afterend', markup);
   };
-
-  
-export const renderLoader = () => {
-    const loader = `
-    <div class="${elementStrings.loader}">
-        <svg>
-            <use href="img/sprite.svg#icon-loop2"></use>
-        </svg>
-    </div>
-    `;
-    elements.searchResArt.insertAdjacentHTML('beforeend', loader);
-};
-
-export const clearLoader = () => {
-    const loader = document.querySelector(`.${elementStrings.loader}`);
-    if (loader) loader.parentElement.removeChild(loader);
-};
-

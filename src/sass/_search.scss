@@ -22,7 +22,7 @@
 
     @media only screen and (max-width: $bp-medium) {
         margin-top: -37rem;
-        padding: 40rem 0 10rem 0;
+        padding: 40rem 0 30rem 0;
     }
     
     &__box {
@@ -153,8 +153,8 @@
 
 .loader-2 {
     
-    position: absolute;
-    margin-top: 45rem;
+    margin-left: 45%;
+    
 
     & svg {
         fill: var(--default-font-color);
@@ -167,6 +167,8 @@
             width: 7rem;
         }
     }
+
+    
 }
 
 @keyframes rotate {
