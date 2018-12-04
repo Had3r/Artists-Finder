@@ -188,13 +188,9 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-        height: 80rem;
+        height: 90rem;
     }
-
-    @media only screen and (max-width: $bp-smaller) {
-        height: 88rem;
-    }
-    
+ 
     &__title {
         width: 100%;
         position: absolute;
@@ -245,6 +241,7 @@
 
     @media only screen and (max-width: $bp-smaller) {
         transform: none;
+        width: 76%;
     }
 }
 

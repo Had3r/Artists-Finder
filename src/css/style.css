@@ -286,10 +286,7 @@ body {
       height: 75rem; } }
   @media only screen and (max-width: 34.38em) {
     .albums {
-      height: 80rem; } }
-  @media only screen and (max-width: 28.13em) {
-    .albums {
-      height: 88rem; } }
+      height: 90rem; } }
   .albums__title {
     width: 100%;
     position: absolute;
@@ -328,7 +325,8 @@ body {
         transform: none; } }
   @media only screen and (max-width: 28.13em) {
     .box {
-      transform: none; } }
+      transform: none;
+      width: 76%; } }
 
 .albums__pages {
   text-align: center;
