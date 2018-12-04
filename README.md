@@ -1,5 +1,5 @@
-# Forkify  
-> 
+# Artist Finder  
+> It is a search engine of three top artists in a given country.
 
 ## General info
 
