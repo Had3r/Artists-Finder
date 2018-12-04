@@ -1,7 +1,6 @@
 import { elements } from './base';
 const { getName } = require('country-list');
 
-
 export const getQuery = () => elements.searchInput.value;
 
 export const clearInput = () => {

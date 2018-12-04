@@ -60,7 +60,6 @@ const controlAlbum = async () => {
         // 2. Prepare UI for changes
         albumView.clearAlbums();
         albumView.setCursor();
-
         elements.footer.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
         // 3. Create new album object
@@ -87,7 +86,6 @@ elements.searchResult.addEventListener('click', e => {
         const goToPage = parseInt(btn.dataset.goto, 10);
         albumView.clearAlbumsList();
         albumView.clearButton();
-        
         albumView.renderAlbums(state.album.result, goToPage);
     }
 });

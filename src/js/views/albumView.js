@@ -9,14 +9,11 @@ const elementStrings = {
 };
 
 export const clearAlbums = () => {
-    
-    
-
     const result = document.querySelector(`.${elementStrings.album}`);
+
     if (result) {
         result.parentElement.removeChild(result);
     }
-     
 };
 
 export const clearAlbumsList = () => {
@@ -34,7 +31,6 @@ export const clearButton = () => {
 };
 
 export const setCursor = () => elements.body.style.cursor = 'wait';
-
 export const clearCursor = () => elements.body.style.cursor = 'default';
 
 export const renderAlbum = album => {
