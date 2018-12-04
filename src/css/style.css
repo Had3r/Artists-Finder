@@ -28,7 +28,8 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
   @media only screen and (max-width: 40em) {
     html {
       font-size: 50%; } }
@@ -36,6 +37,7 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
+  overflow-x: hidden;
   color: var(--default-font-color);
   padding: 2rem; }
   @media only screen and (max-width: 75em) {

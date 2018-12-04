@@ -45,6 +45,7 @@ $bp-smaller: 28.13em;       // 450px
 html {
     font-size: 62.5%; // 10px
     box-sizing: border-box;
+    overflow-x: hidden;
 
     @media only screen and (max-width: $bp-medium) {
         font-size: 50%;
@@ -54,7 +55,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
-    //background-color: var(--color-grey-light-4);
+    overflow-x: hidden;
     color: var(--default-font-color);
     padding: 2rem;
 
