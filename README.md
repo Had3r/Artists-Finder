@@ -13,7 +13,4 @@ The goal of the project was to create a smoothly working application on devices 
 www.testingpage.pl
 
 ## Status
-Project is:  _finished_.
-
-## Designed and made
-by adrian.zawadzki@outlook.com
+Project is:  _finished_. Design and implementation made by me from scratch.
