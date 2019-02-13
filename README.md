@@ -13,5 +13,18 @@ It is a search engine of three top artists in a given country and their albums. 
 + [x] CSS architecture with SASS
 + [x] RWD with desktop first strategy
 
+## Architecture
 
-
+in the src folder (MVC structure)
+```bash
+ |-- js/
+    |-- models/
+        |-- Album.js       - ajax requests
+        |-- Search.js      - ajax requests
+    |-- views/
+        |-- albumView.js   - one interface for various aspects of the app
+        |-- searchView.js  - as above
+        |-- base.js        - DOM manipulation
+    |-- config.js
+    |-- index.js           - controller
+```
