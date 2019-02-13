@@ -1,5 +1,14 @@
+<div align="center">
+
+# Artists Finder (MVC pattern) in pure JavaScript
+
+It is a search engine of three top artists in a given country and their albums. The API I used is called Musixmatch (https://developer.musixmatch.com/documentation). I used the ***MVC design pattern*** here.
+
+</div>
+
+
 # Artist Finder  
-> It is a search engine of three top artists in a given country and their albums. The API I used is called Musixmatch.
+> 
 
 ## General info
 The goal of the project was to create a smoothly working application on devices with different resolutions using an external api.
