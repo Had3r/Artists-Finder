@@ -37,9 +37,11 @@ const headerSearch = async () => {
             await state.search.getResults(); 
 
             // 6. Render result on UI
-            searchView.renderResults(state.search.result);
+            console.log(state.search.result)
+            searchView.renderResults(state.search.result);  // to tablica z trzema artystami
+            
         } catch (err) {
-            console.log('error');
+            console.log('error propably in searchView');
             searchView.clearLoader();
         }
     }

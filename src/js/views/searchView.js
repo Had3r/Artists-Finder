@@ -31,7 +31,7 @@ export const renderFirstArtist = (top1, countryOne = 'no data in demo') => {
             </div>
             <div class="container__text-3">
                 <div class="container__text-3--style">
-                    music genre: ${top1.artist.primary_genres.music_genre_list[0].music_genre.music_genre_name}
+                    artist rating: ${top1.artist.artist_rating}
                 </div>
             </div>
             <a href="#${top1.artist.artist_id}" class="container__link">
@@ -65,7 +65,7 @@ export const renderSecondArtist = (top2, countryTwo = 'no data in demo') => {
             </div>
             <div class="container__text-3">
                 <div class="container__text-3--style">
-                    music genre: ${top2.artist.primary_genres.music_genre_list[0].music_genre.music_genre_name}
+                artist rating: ${top2.artist.artist_rating}
                 </div>
             </div>
             <a href="#${top2.artist.artist_id}" class="container__link">
@@ -99,7 +99,7 @@ export const renderThirdArtist = (top3, countryThree = 'no data in demo') => {
             </div>
             <div class="container__text-3">
                 <div class="container__text-3--style">
-                    music genre: ${top3.artist.primary_genres.music_genre_list[0].music_genre.music_genre_name}
+                artist rating: ${top3.artist.artist_rating}
                 </div>
             </div>
             <a href="#${top3.artist.artist_id}" class="container__link">
@@ -112,7 +112,6 @@ export const renderThirdArtist = (top3, countryThree = 'no data in demo') => {
 
     elements.searchResArt.insertAdjacentHTML('beforeend', markup);
 };
-
 
 export const renderResults = artists  => { 
     clearLoader();

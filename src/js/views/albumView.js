@@ -10,7 +10,6 @@ const elementStrings = {
 
 export const clearAlbums = () => {
     const result = document.querySelector(`.${elementStrings.album}`);
-
     if (result) {
         result.parentElement.removeChild(result);
     }
@@ -34,6 +33,10 @@ export const setCursor = () => elements.body.style.cursor = 'wait';
 export const clearCursor = () => elements.body.style.cursor = 'default';
 
 export const renderAlbum = album => {
+
+    let type = album.album.primary_genres.music_genre_list.length > 0 ?
+                album.album.primary_genres.music_genre_list[0].music_genre.music_genre_name : 'no data from API';
+
     const markup = `
         <div class="box">
             <div class="box__text--name">
@@ -43,7 +46,7 @@ export const renderAlbum = album => {
                 relased in ${album.album.album_release_date},
             </div>
             <div class="box__text--type">
-                type: ${album.album.album_release_type} 
+                type: ${type} 
             </div>
         </div>
     `;
