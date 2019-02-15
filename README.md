@@ -13,6 +13,12 @@ It is a search engine of three top artists in a given country and their albums. 
 + [x] CSS architecture with SASS
 + [x] RWD with desktop first strategy
 
+## Preview
+
+http://www.artist-finder.pl/
+
+note: no support for the internet explorer browser
+
 ## Architecture
 
 in the src folder (MVC structure)
